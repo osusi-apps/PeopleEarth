@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:name], email: params[:email])
     if @user.save
-      flash[:notice] = "台風が来ました"
+      flash[:notice] = "紐づくかな？"
       redirect_to @user
     else
       render :new
