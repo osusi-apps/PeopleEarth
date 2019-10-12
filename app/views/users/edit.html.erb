@@ -1,0 +1,28 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">アカウント編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <!-- エラーメッセージを表示するためのHTMLを貼り付けてください -->
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <!-- フォームの送信先を指定してください -->
+        <%= form_with model: @user do |f| %>
+        <div class="form-group">
+          <%= f.label :name, 'ユーザー名' %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email, 'メールアドレス' %>
+          <%= f.email_field :email, class: 'form-control' %>
+        </div>
+        <div class="al-c"><%= f.submit '保存', class: 'btn btn-primary' %></div>
+        <!-- endを追加してください -->
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
