@@ -1,0 +1,14 @@
+<div class="main article-index">
+  <div class="container">
+    <h1 class="articles-heading">記事一覧</h1>
+    <div class="articles">
+      <% articles = [1, 2, 3, 4] %>
+      <% articles.each do |article| %>
+        <div class="article">
+          <div class="article-img"><%= image_tag 'article_img_sample.jpeg', :width =>'400' %></div>
+          <h2 class="article-title">記事タイトル</h2>
+        </div> <!-- /.article -->
+      <% end %>
+    </div> <!-- /.articles -->
+  </div> <!-- /.container -->
+</div>
