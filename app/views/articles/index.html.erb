@@ -4,10 +4,12 @@
     <div class="articles">
       <% articles = [1, 2, 3, 4] %>
       <% articles.each do |article| %>
-        <div class="article">
-          <div class="article-img"><%= image_tag 'article_img_sample.jpeg', :width =>'400' %></div>
-          <h2 class="article-title">記事タイトル</h2>
-        </div> <!-- /.article -->
+        <a href="/articles/detail" class="link-to-article">
+          <div class="article">
+           <div class="article-img"><%= image_tag 'article_img_sample.jpeg', :width =>'400' %></div>
+            <h2 class="article-title">記事タイトル</h2>
+          </div> <!-- /.article -->
+        </a>
       <% end %>
     </div> <!-- /.articles -->
   </div> <!-- /.container -->
