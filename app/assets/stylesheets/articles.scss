@@ -1,0 +1,87 @@
+.articles-heading {
+  font-weight: 300;
+  margin: 60px 40px 20px;
+  font-size: 48px;
+  color: #bcc8d4;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+	align-content: space-around;
+  width: 100%;
+}
+.articles article {
+  width: 30%;
+}
+.article_img {
+  padding: 0;
+}
+.article-title {
+  margin: 0 0 8px;
+  padding: 0 0 40px;
+  font-size: 32px;
+}
+
+.link-to-article {
+  margin: 0 0 20px;
+}
+
+/* articles/show ================================ */
+
+.article {
+  margin-bottom: 20px;
+}
+
+.article-return {
+  font-size: 16px;
+}
+
+.article-header img {
+  width: 100%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 20px 0 10px;
+  object-fit: cover;
+}
+
+.article h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 10px 0 20px;
+
+}
+.article h3 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 30px 0 20px;
+
+}
+
+.article-writer {
+  display: flex;
+  justify-content: flex-start;
+	align-content: space-around;
+  align-items: center;
+  margin: 0 0 20px 10px;
+  font-size: 18px;
+}
+
+.article-meta img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 8px 0 0;
+}
+
+.article-date {
+  font-size: 14px;
+  margin: 0 0 40px 0;
+  text-align: right;
+}
+.article-text p {
+  font-size: 20px;
+  font-weight: 400;
+
+}
