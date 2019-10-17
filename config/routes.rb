@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy]
+  resources :articles
   resources :shops
   get "posts/index" => "posts#index"
   get "/" => "home#top"
