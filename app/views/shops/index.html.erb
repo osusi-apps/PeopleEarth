@@ -1,0 +1,17 @@
+<div class="main shops-index">
+  <div class="container">
+    <h1 class="shops-heading">ショップ一覧</h1>
+    <div class="shops">
+      <% @shops.each do |shop| %>
+        <div class="shop">
+          <div class="shop-img">
+            <%= image_tag(shop.image_name) %>
+          </div>
+          <h2 class="shop-title">
+            <%= shop.name %>
+          </h2>
+        </div> <!-- /.shop -->
+      <% end %>
+    </div> <!-- /.shops -->
+  </div> <!-- /.container -->
+</div>

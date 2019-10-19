@@ -1,0 +1,28 @@
+.shops-heading {
+    font-weight: 300;
+    margin: 60px 40px 20px;
+    font-size: 48px;
+    color: #bcc8d4;
+  }
+  
+  .shops {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+      align-content: space-around;
+    width: 100%;
+  }
+  .shops shop {
+    width: 30%;
+  }
+  .shop_img {
+    padding: 0;
+    height: 100px;
+    width: 100px;
+  }
+  .shop-title {
+    margin: 0 0 8px;
+    padding: 0 0 80px;
+    font-size: 32px;
+  }
+  
