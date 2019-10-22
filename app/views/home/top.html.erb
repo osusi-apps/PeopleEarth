@@ -1,4 +1,4 @@
-<div class="main top-main">
+<div class="main top-container">
     <div class="top-message">
         <h1>私たちの一歩で、世界は変わる。</h1>
         <p>ひとりで一歩を踏み出すことは勇気がいるけれど、<br>
@@ -8,5 +8,22 @@
             ひとりひとりが行動を起こすための<br>
             手助けをするために生まれたサービスです。<br>
         </p>
-    </div>
-</div>
+    </div> <!-- /.top-message -->
+
+    <div class="area">
+        <div class="content-logo">Earth</div>
+        <div class="contents">
+            <div class="top-content"> <%= link_to("SHOP", "/shops") %> </div>
+            <div class="top-content"> <%= link_to("ARTICLE", "/articles") %> </div>
+        </div> <!-- /.contents -->
+    </div> <!-- /.earth-area -->
+
+    <div class="area">
+        <div class="content-logo">People</div>
+        <div class="contents">
+            <div class="top-content"> <%= link_to("BOOK", "/books") %> </div>
+            <div class="top-content"> <%= link_to("ARTICLE", "/articles") %> </div>
+        </div> <!-- /.contents -->
+    </div> <!-- /.people-area -->
+
+</div> <!-- /.main top-container -->
