@@ -1,3 +1,4 @@
+/* shops index */
 .shops-heading {
     font-weight: 300;
     margin: 60px 40px 20px;
@@ -25,4 +26,19 @@
     padding: 0 0 80px;
     font-size: 32px;
   }
-  
+  .link-to-article {
+    margin: 0 0 20px;
+  }
+
+  /* shops show */
+  .shop{
+      margin-bottom: 20px;
+  }
+  .shop-return{
+      font-size: 16px;
+  }
+  .shop_image {
+    padding: 0;
+    height: 100px;
+    width: 100px;
+  }
