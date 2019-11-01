@@ -1,0 +1,19 @@
+<div class="main shop-show">
+    <div class="container">
+        <div class="shop-return">
+            <a href="/shops">
+                <p>ショップ一覧へ</p>
+            </a>
+        </div>
+        <div class="shop">
+                <div class="shop-image">
+                    <%= image_tag(@shopDetails.image_name) %>
+                </div>
+                <h2 class="shop-name">
+                    <%= @shopDetails.name %>
+                </h2>
+                <h3 class="shop-overview">
+                    <%= @shopDetails.overview %>
+        </div>
+    </div>
+</div>
