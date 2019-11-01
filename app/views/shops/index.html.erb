@@ -3,7 +3,8 @@
     <h1 class="shops-heading">ショップ一覧</h1>
     <div class="shops">
       <% @shops.each do |shop| %>
-        <a href="/shops/detail" class="link-to-show">
+        <a class="link-to-show">
+        <%= link_to(shop.content, "#{shop.id}") %>
             <div class="shop">
                 <div class="shop-img">
                     <%= image_tag(shop.image_name) %>

@@ -3,6 +3,6 @@ class ShopsController < ApplicationController
     @shops=Shop.all
   end
   def show
-    @shopDetails=Shop.all
+    @shopDetails = Shop.find_by(id: params[:id])
   end
 end
