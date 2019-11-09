@@ -4,13 +4,12 @@
     <div class="shops">
       <% @shops.each do |shop| %>
         <a class="link-to-show">
-        <%= link_to(shop.content, "#{shop.id}") %>
             <div class="shop">
                 <div class="shop-img">
-                    <%= image_tag(shop.image_name) %>
+                <%= link_to(image_tag(shop.image_name), "#{shop.id}") %>
                 </div>
                 <h2 class="shop-title">
-                    <%= shop.name %>
+                <%= link_to(shop.name, "#{shop.id}") %>
                 </h2>
             </div> <!-- /.shop -->
         </a>
