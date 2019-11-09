@@ -116,10 +116,17 @@ body {
   font-size: 22px;
 }
 
+footer{
+  height: 64px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+
 .footer-area {
   scroll-snap-align: end;
   text-align: center;
-  height: 15vh;
+  height: 64px;
   display: flex;
   flex-wrap: wrap;
   background-color:   rgba(17, 167, 3, 0.644);
@@ -130,7 +137,8 @@ body {
 
 .footer {
   width: 100%;
+  height: 64px;
   color: #442407;
   text-align: center;
-  padding: 20px 0;
+  padding-top: 20px;
 }
