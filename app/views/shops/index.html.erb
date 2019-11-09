@@ -3,14 +3,16 @@
     <h1 class="shops-heading">ショップ一覧</h1>
     <div class="shops">
       <% @shops.each do |shop| %>
-        <div class="shop">
-          <div class="shop-img">
-            <%= image_tag(shop.image_name) %>
-          </div>
-          <h2 class="shop-title">
-            <%= shop.name %>
-          </h2>
-        </div> <!-- /.shop -->
+        <a class="link-to-show">
+            <div class="shop">
+                <div class="shop-img">
+                <%= link_to(image_tag(shop.image_name), "#{shop.id}") %>
+                </div>
+                <h2 class="shop-title">
+                <%= link_to(shop.name, "#{shop.id}") %>
+                </h2>
+            </div> <!-- /.shop -->
+        </a>
       <% end %>
     </div> <!-- /.shops -->
   </div> <!-- /.container -->
