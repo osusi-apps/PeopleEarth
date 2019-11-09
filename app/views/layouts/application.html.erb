@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PeopleEarthApp</title>
+    <title>PeopleEarth</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,29 +12,17 @@
         <div class="header-logo">
           <%= link_to("People Earth","/") %>
         </div>
-        <ul class="header-menus">
-          <li>
-            <%= link_to("People Earthとは","/about") %>
-          </li>
-            <%= link_to("記事一覧", "/articles") %>
-          <li>
-          </li>
-          <li>
-            <%= link_to("投稿一覧", "posts/index") %>
-          </li>
-          <li>
-            <%= link_to("ショップ一覧", "/shops/index") %>
-          </li>
-          <li>
-            <%= link_to("ユーザー一覧", "/users") %>
-          </li>
-          <li>
-            <%= link_to("新規登録", "/signup") %>
-           </li>
-
-
-        </ul>
-　  </header>
+    </header>
+    
   <%= yield %>
+
+    <footer>
+    <div class="footer-area">
+    <div class="footer">
+        お問い合わせはこちら　people-earth@gmail.com
+    </div> <!-- /.footer -->
+    </div> <!-- /.footer-area -->
+    </footer>
+
   </body>
 </html>
