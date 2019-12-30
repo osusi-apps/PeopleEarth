@@ -1,0 +1,19 @@
+<div class="main books-index">
+  <div class="container">
+    <h1 class="books-heading">本一覧</h1>
+    <div class="books">
+      <% @books.each do |book| %>
+        <a class="link-to-show">
+            <div class="book">
+                <div class="book_img">
+                <%= link_to(image_tag(book.image_name), "#{book.id}") %>
+                </div>
+                <h2 class="book-title">
+                <%= link_to(book.title, "#{book.id}") %>
+                </h2>
+            </div> <!-- /.book -->
+        </a>
+      <% end %>
+    </div> <!-- /.books -->
+  </div> <!-- /.container -->
+</div>
