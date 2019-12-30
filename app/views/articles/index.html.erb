@@ -5,7 +5,7 @@
       <% @articles.each do |article| %>
         <div class="article">
         <a href="/articles/<%= article.id %>" class="link-to-article">
-            <div class="article-img"><%= image_tag 'article_people1.jpg', :width =>'400', :height =>'300' %></div>
+            <div class="article-img"><%= image_tag article.image_name, :width =>'400', :height =>'300' %></div>
             <p class="article-title"><%= article.title %></p>
         </a>
         </div> <!-- /.article -->
