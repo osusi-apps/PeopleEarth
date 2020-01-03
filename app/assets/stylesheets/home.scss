@@ -29,7 +29,7 @@ a {
 }
 
 header {
-  height: 64px;
+  height: 10vh;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -107,13 +107,18 @@ body {
   align-items: center;
 }
 
-.pe {
+.center-block {
+  padding-top: 10vh;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: space-around;
+}
+
+.pe-text {
+  margin: 0px 0px;
 }
 
 .top-content {
