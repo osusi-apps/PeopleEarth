@@ -1,6 +1,14 @@
 <div class="main article-show">
   <div class="container">
-    <div class="article-return"><a href="/articles"><p>記事一覧へ</p></a></div>
+
+    <div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <ul>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/"><span itemprop="name">記事一覧</span></a><meta itemprop="position" content="1" /></span></li>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles?<%= @articleDetails.category_id %>"><span itemprop="name"><%= @category.name %></span></a><meta itemprop="position" content="2" /></span></li>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/<%= @articleDetails.id %>"><span itemprop="name"><%= @articleDetails.title %></span></a><meta itemprop="position" content="2" /></span></li>
+    </ul>
+    </div>
+
     <div class="article">
       <div class="article-header">
         <div><%= image_tag @articleDetails.image_name, :size =>'900x400' %></div>

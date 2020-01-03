@@ -1,4 +1,3 @@
-
 .articles-heading {
   font-weight: 300;
   margin: 60px 40px 20px;
@@ -10,7 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-	align-content: space-around;
+  align-content: space-around;
   width: 100%;
 }
 .articles article {
@@ -36,8 +35,32 @@
   margin-bottom: 20px;
 }
 
-.article-return {
-  font-size: 16px;
+.breadcrumbs {
+  width: 980px;
+  margin: 10px auto 0;
+}
+.breadcrumbs ul {
+  display: table;
+  font-size: 13px;
+}
+.breadcrumbs ul li {
+  margin: 0 10px 0 0;
+  font-size: 13px;
+  float: left;
+}
+.breadcrumbs ul li:first-child::before {
+  padding: 0 3px 0 0;
+  content: "\f1ea";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+}
+.breadcrumbs ul li::before {
+  padding: 0 7px 0 0;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
 }
 
 .article-header img {
@@ -52,20 +75,18 @@
   font-weight: 600;
   line-height: 1.2;
   padding: 10px 0 20px;
-
 }
 .article h3 {
   font-size: 23px;
   font-weight: 700;
   line-height: 1.2;
   padding: 30px 0 20px;
-
 }
 
 .article-writer {
   display: flex;
   justify-content: flex-start;
-	align-content: space-around;
+  align-content: space-around;
   align-items: center;
   margin: 0 0 20px 10px;
   font-size: 18px;
