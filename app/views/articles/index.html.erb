@@ -1,15 +1,40 @@
 <div class="main article-index">
-  <div class="container">
-    <h1 class="articles-heading">記事一覧</h1>
-    <div class="articles">
+
+  <div class="top-bar">
+    <h1>Article</h1>
+    <p>「まずは小さな一歩から」なんて、当たり前のようで難しい。<br>
+          そんなあなたの勇気になるように。<br>
+          一歩踏み出す決意をしたメンバーの声を集めました。
+</p>
+  </div> <!-- /.top-bar -->
+
+  <div class="contents-bar">
+    <div class="article-box">
+
       <% @articles.each do |article| %>
-        <div class="article">
         <a href="/articles/<%= article.id %>" class="link-to-article">
-            <div class="article-img"><%= image_tag article.image_name, :width =>'400', :height =>'300' %></div>
-            <p class="article-title"><%= article.title %></p>
+
+          <div class="article-contents">
+            <div class="article-img"><%= image_tag article.image_name, :width =>'300', :height =>'200' %></div>
+
+              <p class="article-title"><%= article.title %></p>
+
+              <div class="article-info">
+                    <div class="writer-img">
+                      <img>
+                    </div>
+                  <p class="writer-name"><%= article.writer %></p>
+              </div><!-- /.article-info -->
+
+          </div><!-- /.article-contents -->
         </a>
-        </div> <!-- /.article -->
       <% end %>
-      </div> <!-- /.articles -->
-  </div> <!-- /.container -->
+
+      </div><!-- /.article-box -->
+    </div><!-- /.contents-bar -->
+  </div><!-- /.main article-index -->
+
+
+
+
 </div>
