@@ -15,15 +15,15 @@
         <a href="/articles/<%= article.id %>" class="link-to-article">
 
           <div class="article-contents">
-            <div class="article-img"><%= image_tag article.image_name, :width =>'300', :height =>'200' %></div>
+            <div class="article-sumbnail"><%= image_tag article.image_name, :width =>'290', :height =>'200' %></div>
 
               <p class="article-title"><%= article.title %></p>
 
               <div class="article-info">
                     <div class="writer-img">
-                      <img>
+                      <%= image_tag article.writer.image_name, :size => '50x50' %>
                     </div>
-                  <p class="writer-name"><%= article.writer %></p>
+                    <p class="writer-name"><%= article.writer.name %></p>
               </div><!-- /.article-info -->
 
           </div><!-- /.article-contents -->
