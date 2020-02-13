@@ -1,0 +1,271 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* reset ================================ */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+html {
+  font: 100%/1.5 "Avenir Next", "Hiragino Sans", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+body {
+  # margin-bottom: 64px;
+  background-size:cover;
+}
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #a47f8b;
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(230,230,230,0.0);
+  background-blend-mode:lighten;
+}
+
+.header-logo {
+  float: left;
+  padding-left: 20px;
+  font-size: 28px !important;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+body {
+  margin: 0;
+  min-height: 1vh;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 150px;
+  clear: both;
+}
+
+.top-container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #363431;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.top-message {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(255,255,255,0.3);
+  background-blend-mode:lighten;
+  background-position: center;
+  text-align: center;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.top-message h1 {
+  padding: 60px 0 60px;
+  font-size: 40px;
+}
+
+.top-pe {
+  background-size: cover;
+  background-position: center;
+}
+
+.top-inquiry {
+  background-size: cover;
+  background-position: center;
+}
+.area {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image1 {
+  background-image: url("<%= asset_url("top-background.jpg") %>")
+}
+
+.bg-image2{
+  background-image:  url("<%= asset_url("top-background2.jpg") %>")
+}
+
+.bg-image3{
+  background-image:  url("<%= asset_url("top-background3.jpg") %>")
+}
+
+.bg-image4{
+  background-image:  url("<%= asset_url("top-background4.jpg") %>")
+}
+
+.bg-mask {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(245,245,245,0.1);
+}
+
+.center-block {
+  padding-top: 10vh;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+
+.pe-text {
+  margin: 0px 0px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+.top-content {
+  margin: 0 60px;
+  font-size: 22px;
+}
+
+.contents a {
+  color: #4D4742;
+}
+
+.message span {
+font-weight: bold;
+font-size: 20px;
+line-height: 35px;
+}
+
+.inquiry {
+  text-align:center;
+}
+
+.inquiry-title {
+  width: 500px;
+}
+
+input {
+  margin-bottom:10px;
+}
+textarea {
+  height:100px;
+  margin-bottom:10px;
+}
+
+input:first-of-type
+{
+  margin-top:35px;
+}
+input, textarea {
+  font-size: 1em;
+  padding: 15px 10px 10px;
+  border: 1px solid #cecece;
+  background: #d7d7d7;
+  color:#FAFAFA;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+}
+::-webkit-input-placeholder {
+   color: #FAFAFA;
+}
+button {
+  margin-top:15px;
+  margin-bottom:25px;
+  background-color:#c0aeb4;
+  padding: 10px 15px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #c0aeb4;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: inline-block;
+  cursor: pointer;
+  width:60%;
+  color:#fff;
+}
+button:hover, .button:hover {
+  background:#a47f8b;
+}
+label.error {
+    font-family:'Source Sans Pro',arial,sans-serif;
+    font-size:1em;
+    display:block;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:#d89c9c;
+    width: 80%;
+    margin:auto;
+    color: #FAFAFA;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+/* media queries */
+@media (max-width: 700px) {
+  label.error {
+    width: 90%;
+  }
+  input, textarea {
+    width: 90%;
+  }
+  button {
+    width:90%;
+  }
+  body {
+  padding-top:10px;
+  }
+}
+.contact-message {
+    font-family:'Source Sans Pro',arial,sans-serif;
+    font-size:1.1em;
+    display:none;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color:#2ABCA7;
+    width: 100%;
+    margin:auto;
+    color: #FAFAFA;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
