@@ -1,6 +1,19 @@
 <div class="main article-index bg-image3">
 
+
+
+
   <div class="top-bar">
+  <div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <ul>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/"><span itemprop="name">記事一覧</span></a><meta itemprop="position" content="1" /></span></li>
+      <% if params[:id] == 1 || params[:id] == 2 %>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles?category_id=<%= @category.id %>"><span itemprop="name"><%= @category.name %></span></a><meta itemprop="position" content="2" /></span></li>
+      <% else %>
+      <% end %>
+    </ul>
+    </div>
+
     <h1>Article</h1>
     <p>「まずは小さな一歩から」なんて、当たり前のようで難しい。<br>
           そんなあなたの勇気になるように。<br>
