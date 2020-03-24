@@ -2,44 +2,44 @@
 .book-index {
   background-attachment: fixed;
   background-size: cover;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   background-position: center;
   text-align: center;
 }
 
 .books-heading {
-    font-weight: 300;
-    margin: 60px 40px 20px;
-    font-size: 48px;
-    color: #bcc8d4;
-  }
+  font-weight: 600;
+  margin: 60px 40px 20px;
+  font-size: 48px;
+  color: #363431;
+}
 
-  .books {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-      align-content: space-around;
-    width: 100%;
-  }
-  .books book {
-    display: block;
-    width: 30%;
-  }
-  .book_img {
-    padding: 0;
-    height: 340px;
-    width: 400px;
-  }
-  .book-title {
-    margin: 0 0 8px;
-    padding: 0 0 20px;
-    font-size: 16px;
-  }
-  .link-to-article {
-    margin: 0 0 20px;
-  }
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 100%;
+}
+.books book {
+  display: block;
+  width: 30%;
+}
+.book_img {
+  padding: 0;
+  height: 340px;
+  width: 400px;
+}
+.book-title {
+  margin: 0 0 8px;
+  padding: 0 0 20px;
+  font-size: 16px;
+}
+.link-to-article {
+  margin: 0 0 20px;
+}
 
-  /* books show */
-  .book{
-      margin-bottom: 20px;
-  }
+/* books show */
+.book {
+  margin-bottom: 20px;
+}
