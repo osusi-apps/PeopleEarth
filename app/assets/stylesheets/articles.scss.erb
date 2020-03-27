@@ -1,32 +1,82 @@
-.articles-heading {
-  font-weight: 300;
-  margin: 60px 40px 20px;
-  font-size: 48px;
-  color: #bcc8d4;
+.article-index {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(255,255,255,0.3);
+  background-position: center;
+  text-align: center;
 }
 
-.articles {
+.top-bar {
+  font-weight: 300;
+  padding: 50px 40px 20px;
+  height: 40vh;
+  font-size: 48px;
+  text-align: center;
+}
+.top-bar h1 {
+  font-weight: 600;
+  margin: 20px 40px 20px;
+  font-size: 48px;
+  color: #363431;
+}
+
+.top-bar p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #363431;
+}
+
+.contents-bar a {
+  background-color: white;
+  width: 320px;
+  margin-bottom: 50px;
+}
+
+.article-info {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-around;
+  align-items: center;
+  margin: 0 0 20px 10px;
+  color: #363431;
+}
+
+.article-sumbnail {
+  text-align: center;
+  vertical-align: top;
+}
+
+.article-info img {
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px 8px 0 0;
+}
+
+.article-box {
+  padding: 20px 13vw 0;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: space-around;
   width: 100%;
 }
-.articles article {
-  width: 30%;
-}
-.article_img {
-  padding: 0;
-}
-.article-title {
-  margin: 0 0 8px;
-  padding: 0 0 40px;
-  font-size: 24px;
-  font-weight: 300;
+
+.article-contents {
+  margin: 15px 15px;
 }
 
-.link-to-article {
-  margin: 0 0 20px;
+.article-title {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #363431;
+  text-align: left;
+}
+
+.writer-name {
+  font-size: 14px;
 }
 
 /* articles/show ================================ */
@@ -75,6 +125,7 @@
   font-weight: 600;
   line-height: 1.2;
   padding: 10px 0 20px;
+  color: #363431;
 }
 .article h3 {
   font-size: 23px;
@@ -90,6 +141,7 @@
   align-items: center;
   margin: 0 0 20px 10px;
   font-size: 18px;
+  color: #363431;
 }
 
 .article-meta img {
@@ -102,10 +154,12 @@
   font-size: 14px;
   margin: 0 0 40px 0;
   text-align: right;
+  color: #363431;
 }
 .article-text p {
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
   padding: 20px 0;
+  color: #363431;
 }

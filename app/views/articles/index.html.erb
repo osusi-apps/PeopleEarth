@@ -1,15 +1,53 @@
-<div class="main article-index">
-  <div class="container">
-    <h1 class="articles-heading">記事一覧</h1>
-    <div class="articles">
-      <% @articles.each do |article| %>
-        <div class="article">
-        <a href="/articles/<%= article.id %>" class="link-to-article">
-            <div class="article-img"><%= image_tag article.image_name, :width =>'400', :height =>'300' %></div>
-            <p class="article-title"><%= article.title %></p>
-        </a>
-        </div> <!-- /.article -->
+<div class="main article-index bg-image3">
+
+
+
+
+  <div class="top-bar">
+  <div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <ul>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/"><span itemprop="name">記事一覧</span></a><meta itemprop="position" content="1" /></span></li>
+      <% if params[:id] == 1 || params[:id] == 2 %>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles?category_id=<%= @category.id %>"><span itemprop="name"><%= @category.name %></span></a><meta itemprop="position" content="2" /></span></li>
+      <% else %>
       <% end %>
-      </div> <!-- /.articles -->
-  </div> <!-- /.container -->
+    </ul>
+    </div>
+
+    <h1>Article</h1>
+    <p>「まずは小さな一歩から」なんて、当たり前のようで難しい。<br>
+          そんなあなたの勇気になるように。<br>
+          一歩踏み出す決意をしたメンバーの声を集めました。
+</p>
+  </div> <!-- /.top-bar -->
+
+  <div class="contents-bar">
+    <div class="article-box">
+
+      <% @articles.each do |article| %>
+        <a href="/articles/<%= article.id %>" class="link-to-article">
+
+          <div class="article-contents">
+            <div class="article-sumbnail"><%= image_tag article.image_name, :width =>'290', :height =>'200' %></div>
+
+              <p class="article-title"><%= article.title %></p>
+
+              <div class="article-info">
+                    <div class="writer-img">
+                      <%= image_tag article.writer.image_name, :size => '50x50' %>
+                    </div>
+                    <p class="writer-name"><%= article.writer.name %></p>
+              </div><!-- /.article-info -->
+
+          </div><!-- /.article-contents -->
+        </a>
+      <% end %>
+
+      </div><!-- /.article-box -->
+    </div><!-- /.contents-bar -->
+  </div><!-- /.main article-index -->
+
+
+
+
 </div>

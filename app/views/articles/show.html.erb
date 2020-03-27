@@ -4,24 +4,26 @@
     <div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
     <ul>
       <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/"><span itemprop="name">記事一覧</span></a><meta itemprop="position" content="1" /></span></li>
-      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles?<%= @articleDetails.category_id %>"><span itemprop="name"><%= @category.name %></span></a><meta itemprop="position" content="2" /></span></li>
-      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/<%= @articleDetails.id %>"><span itemprop="name"><%= @articleDetails.title %></span></a><meta itemprop="position" content="2" /></span></li>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles?category_id=<%= @article.category_id %>"><span itemprop="name"><%= @article.category.name %></span></a><meta itemprop="position" content="2" /></span></li>
+      <li><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="item" href="/articles/<%= @article.id %>"><span itemprop="name"><%= @article.title %></span></a><meta itemprop="position" content="2" /></span></li>
     </ul>
     </div>
 
     <div class="article">
       <div class="article-header">
-        <div><%= image_tag @articleDetails.image_name, :size =>'900x400' %></div>
-        <div><h2><%= @articleDetails.title %></h2></div>
+        <div><%= image_tag @article.image_name, :size =>'900x400' %></div>
+        <div><h2><%= @article.title %></h2></div>
       </div> <!-- /.article-header -->
 
       <div class="article-meta">
-        <div class="article-writer"><%= image_tag @writers.image_name, :size => '50x50' %><p><%= @writers.name %></p></div>
-        <p class="article-date"><%= @articleDetails.date %></p>
+        <div class="article-writer">
+            <%= image_tag @article.writer.image_name, :size => '50x50' %><p><%= @article.writer.name %></p>
+        </div>
+        <p class="article-date"><%= @article.date %></p>
       </div>
 
       <div class="article-text">
-        <%= @articleDetails.text.html_safe %>
+        <%= @article.text.html_safe %>
       <div> <!-- /.article-text -->
 
     </div> <!-- /.article -->

@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_03_073401) do
+ActiveRecord::Schema.define(version: 2020_01_13_054320) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
-    t.string "writer"
     t.date "date"
     t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_name"
     t.integer "category_id"
+    t.integer "writer_id"
   end
 
   create_table "books", force: :cascade do |t|
