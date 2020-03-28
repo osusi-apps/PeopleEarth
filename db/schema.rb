@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_06_083652) do
+ActiveRecord::Schema.define(version: 2020_03_28_072658) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_name"
+    t.integer "category_id"
+    t.integer "writer_id"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.text "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "overview"
+    t.string "image_url"
+    t.string "url"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -18,9 +44,25 @@ ActiveRecord::Schema.define(version: 2019_09_06_083652) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "shops", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "image_name"
+    t.string "overview"
+    t.string "url"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "writers", force: :cascade do |t|
+    t.string "name"
+    t.string "image_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

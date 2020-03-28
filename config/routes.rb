@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'books/index'
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :create, :edit, :update, :destroy]
-  get "posts/index" => "posts#index"
+  resources :articles
+
+  resources :shops
+  resources :books
   get "/" => "home#top"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "about" => "home#about"
 end

@@ -1,0 +1,23 @@
+<div class="main book-index bg-image3">
+  <div class="container">
+    <h1 class="books-heading">Book</h1>
+    <div class="books">
+      <% @books.each do |book| %>
+        <a class="link-to-show">
+            <div class="book">
+                <div class="book_img">
+                <a href="<%= book.url %>" target="brank"><%= image_tag book.image_url %></a>
+                </div>
+                <h2 class="book-title">
+                <%= link_to(book.title, "#{book.id}") %>
+                </h2>
+                <p class="book-overview">
+                <%= link_to(book.overview, "#{book.id}") %>
+                </p>
+                
+            </div> <!-- /.book -->
+        </a>
+      <% end %>
+    </div> <!-- /.book-index -->
+  </div> <!-- /.container -->
+</div>
